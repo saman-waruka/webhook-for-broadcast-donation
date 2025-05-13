@@ -6,6 +6,7 @@ import { validate } from './config/env.validation';
 import { HealthModule } from './health/health.module';
 import { DonationsModule } from './donations/donations.module';
 import { WebsocketModule } from './websocket/websocket.module';
+import { TtsModule } from './tts/tts.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { WebsocketModule } from './websocket/websocket.module';
     HealthModule,
     DonationsModule,
     WebsocketModule,
+    TtsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

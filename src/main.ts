@@ -20,6 +20,12 @@ async function bootstrap() {
     }),
   );
 
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  });
+
   await app.listen(port);
   Logger.log(`Server is running on port ${port}`, 'Bootstrap');
 }
